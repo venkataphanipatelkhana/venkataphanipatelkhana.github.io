@@ -670,6 +670,65 @@
       margin-top: 17px;
     }
 
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .testimonial-card {
+      position: relative;
+      padding: 28px;
+      border: 1px solid #dbeafe;
+      border-radius: 14px;
+      background:
+        linear-gradient(
+          135deg,
+          #eff6ff 0%,
+          #ffffff 72%
+        );
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .testimonial-card.featured {
+      grid-column: 1 / -1;
+    }
+
+    .quote-mark {
+      margin-bottom: 2px;
+      color: var(--primary);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 0.9;
+    }
+
+    .testimonial-card blockquote {
+      margin: 0 0 22px;
+      color: #334155;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-author strong {
+      color: var(--heading);
+      font-size: 16px;
+    }
+
+    .testimonial-author span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
     .research-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -925,11 +984,13 @@
       .research-grid,
       .evidence-grid,
       .service-columns,
-      .media-card {
+      .media-card,
+      .testimonial-grid {
         grid-template-columns: 1fr;
       }
 
-      .evidence-card.featured {
+      .evidence-card.featured,
+      .testimonial-card.featured {
         grid-column: auto;
       }
     }
@@ -1074,6 +1135,7 @@
       <a href="#upcoming">Upcoming</a>
       <a href="#speaking">Past Talks</a>
       <a href="#media">Media</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#publications">Publications</a>
       <a href="#service">Service</a>
       <a href="#articles">Articles</a>
@@ -1985,6 +2047,47 @@
           </div>
         </div>
       </article>
+    </section>
+
+    <section id="testimonials">
+      <h2>What Organisers and Peers Say</h2>
+
+      <p class="section-intro">
+        Selected feedback from professionals and community organisations
+        that have hosted my presentations or collaborated with me on
+        technical initiatives.
+      </p>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card featured">
+          <div class="quote-mark" aria-hidden="true">“</div>
+
+          <blockquote>
+            Your ability to break down complex concepts into practical,
+            real-world perspectives made the session incredibly valuable.
+            The energy, depth of knowledge, and interactive discussion
+            truly made it a memorable event for our Richmond ACM
+            community.
+          </blockquote>
+
+          <div class="testimonial-author">
+            <strong>Richmond ACM Chapter</strong>
+            <span>
+              Following “Why AI Agents Fail in Production—and How to
+              Fix Them” · May 2026
+            </span>
+          </div>
+
+          <a
+            href="https://www.linkedin.com/posts/a-huge-thank-you-to-venkata-phani-patelkhana-share-7461812021693579264-Sn6z/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABOCrpIBzbhcXVbPhoHNAkiLmfJR33DX43U"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-link"
+          >
+            View original LinkedIn post →
+          </a>
+        </article>
+      </div>
     </section>
 
     <section id="publications">
