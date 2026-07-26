@@ -2,138 +2,1040 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Venkata Phani Patelkhana</title>
+  <meta
+    name="description"
+    content="Professional portfolio of Venkata Phani Patelkhana: Distinguished Engineer, IEEE Senior Member, independent practitioner, speaker, and author focused on enterprise AI architecture, agent identity, MCP gateways, runtime authorization, enterprise graphs, API security, and AI governance."
+  >
+
+  <meta name="author" content="Venkata Phani Patelkhana">
+
+  <meta
+    name="keywords"
+    content="Venkata Phani Patelkhana, Phani Patelkhana, Enterprise AI Architecture, Agentic AI, AI Agents, MCP Gateway, Model Context Protocol, Agent Identity, Runtime Authorization, AI Control Plane, Enterprise Graphs, API Security, Developer Portals, IEEE Speaker"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Venkata Phani Patelkhana | Enterprise AI Architecture">
+  <meta
+    property="og:description"
+    content="Distinguished Engineer, IEEE Senior Member, independent practitioner, speaker, and author focused on the identity, context, security, and control-plane foundations required for enterprise AI agents."
+  >
+  <meta property="og:url" content="https://venkataphanipatelkhana.github.io/">
+  <meta
+    property="og:image"
+    content="https://venkataphanipatelkhana.github.io/images/phani-patelkhana.jpg"
+  >
+
+  <link rel="canonical" href="https://venkataphanipatelkhana.github.io/">
+
+  <title>
+    Venkata Phani Patelkhana | Enterprise AI Architecture
+  </title>
 
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e3a8a;
+      --primary-soft: #eff6ff;
+      --accent: #0f766e;
+      --accent-soft: #ecfdf5;
+      --header-start: #0f172a;
+      --header-end: #1e3a8a;
+      --text: #1f2937;
+      --heading: #0f172a;
+      --muted: #64748b;
+      --background: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --past-bg: #f1f5f9;
+      --past-text: #475569;
+      --upcoming-bg: #dcfce7;
+      --upcoming-text: #166534;
+      --tag-bg: #e0e7ff;
+      --tag-text: #3730a3;
+      --shadow: 0 8px 28px rgba(15, 23, 42, 0.07);
+      --shadow-hover: 0 14px 36px rgba(15, 23, 42, 0.11);
+      --radius: 16px;
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #1f2937;
-      background: #f8fafc;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.35);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
 
     header {
-      background: #111827;
+      position: relative;
+      overflow: hidden;
+      padding: 82px 24px 76px;
       color: white;
-      padding: 70px 20px;
-      text-align: center;
+      background:
+        radial-gradient(
+          circle at 12% 20%,
+          rgba(59, 130, 246, 0.24),
+          transparent 31%
+        ),
+        radial-gradient(
+          circle at 90% 82%,
+          rgba(20, 184, 166, 0.16),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          var(--header-start) 0%,
+          #111827 52%,
+          var(--header-end) 100%
+        );
     }
 
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 42px;
+    .hero {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      align-items: center;
+      gap: 50px;
     }
 
-    header p {
-      max-width: 850px;
-      margin: 10px auto;
+    .profile-photo {
+      width: 225px;
+      height: 225px;
+      object-fit: cover;
+      object-position: center top;
+      border: 5px solid rgba(255, 255, 255, 0.92);
+      border-radius: 50%;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #bfdbfe;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(38px, 5vw, 57px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-headline {
+      margin: 0 0 18px;
+      color: #dbeafe;
+      font-size: clamp(17px, 2vw, 20px);
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      margin: 0 0 28px;
+      color: #e5e7eb;
       font-size: 18px;
     }
 
-    nav {
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      font-weight: 750;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #111827;
       background: white;
-      padding: 16px;
-      text-align: center;
-      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .button-primary:hover {
+      color: #111827;
+      background: #f1f5f9;
+    }
+
+    .button-secondary {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .button-secondary:hover {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    nav {
       position: sticky;
       top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px 25px;
     }
 
     nav a {
-      margin: 0 12px;
-      color: #1d4ed8;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 750;
       text-decoration: none;
-      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: var(--primary);
     }
 
     main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 38px 20px 58px;
     }
 
     section {
-      background: white;
-      margin-bottom: 24px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      margin-bottom: 28px;
+      padding: 36px;
+      border: 1px solid rgba(226, 232, 240, 0.92);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
     }
 
     h2 {
-      margin-top: 0;
-      color: #111827;
+      margin: 0 0 14px;
+      color: var(--heading);
+      font-size: clamp(27px, 3vw, 34px);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 4px;
+      margin-top: 12px;
+      border-radius: 99px;
+      background: var(--primary);
     }
 
     h3 {
-      margin-bottom: 5px;
+      margin: 0 0 8px;
+      color: var(--heading);
+      font-size: 21px;
+      line-height: 1.4;
+    }
+
+    h4 {
+      margin: 0 0 6px;
+      color: var(--heading);
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .section-intro {
+      max-width: 870px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .metric {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: #f8fafc;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--primary-dark);
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .disclaimer {
+      margin-top: 24px;
+      padding: 15px 17px;
+      border-left: 4px solid var(--primary);
+      border-radius: 6px;
+      color: #475569;
+      background: #f8fafc;
+      font-size: 14px;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .journey-step {
+      position: relative;
+      min-height: 148px;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: #f8fafc;
+    }
+
+    .journey-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 50%;
+      right: -17px;
+      z-index: 2;
+      width: 22px;
+      color: var(--primary);
+      background: white;
+      font-size: 20px;
+      font-weight: 900;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+
+    .journey-number {
+      display: inline-flex;
+      width: 29px;
+      height: 29px;
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .journey-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .tag {
       display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 6px 10px;
-      margin: 4px;
-      border-radius: 20px;
+      padding: 7px 12px;
+      border: 1px solid #c7d2fe;
+      border-radius: 999px;
+      color: var(--tag-text);
+      background: var(--tag-bg);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .subsection-title {
+      margin: 30px 0 15px;
+      color: var(--heading);
+      font-size: 22px;
+    }
+
+    .subsection-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .talk-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .talk-card {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: white;
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.045);
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .talk-card:hover {
+      transform: translateY(-3px);
+      border-color: #bfdbfe;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .talk-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 10px;
+      margin-bottom: 12px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
+
+    .status-upcoming {
+      color: var(--upcoming-text);
+      background: var(--upcoming-bg);
+    }
+
+    .status-past {
+      color: var(--past-text);
+      background: var(--past-bg);
+    }
+
+    .talk-date {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .talk-card p {
+      color: #475569;
+    }
+
+    .talk-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .text-link {
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    details {
+      margin-top: 17px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .related-reading {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    .related-reading li {
+      margin-bottom: 8px;
+      color: #475569;
       font-size: 14px;
     }
 
-    .item {
-      border-bottom: 1px solid #e5e7eb;
-      padding: 16px 0;
+    .related-reading a {
+      font-weight: 650;
+      text-decoration: none;
     }
 
-    .item:last-child {
-      border-bottom: none;
+    .related-reading a:hover {
+      text-decoration: underline;
     }
 
-    a {
-      color: #1d4ed8;
+    .track {
+      margin-top: 24px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+
+    .track:first-of-type {
+      margin-top: 0;
+    }
+
+    .track-header {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: start;
+      gap: 14px;
+      margin-bottom: 17px;
+    }
+
+    .track-number {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      color: white;
+      background: var(--primary);
+      font-weight: 850;
+    }
+
+    .track-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: white;
+    }
+
+    .article-card h4 {
+      font-size: 16px;
+    }
+
+    .article-card p {
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .article-card a {
+      margin-top: auto;
+      font-size: 14px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .article-card a:hover {
+      text-decoration: underline;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .evidence-card {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fbfdff;
+      box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+    }
+
+    .evidence-card.featured {
+      grid-column: 1 / -1;
+      border-color: #bfdbfe;
+      background:
+        linear-gradient(
+          135deg,
+          #eff6ff 0%,
+          #ffffff 68%
+        );
+    }
+
+    .evidence-label {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 12px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: #1e3a8a;
+      background: #dbeafe;
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+    }
+
+    .evidence-label.patent {
+      color: #0f766e;
+      background: #ccfbf1;
+    }
+
+    .evidence-card p {
+      color: #475569;
+    }
+
+    .citation-line {
+      margin-bottom: 13px;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .evidence-note {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border: 1px solid #dbeafe;
+      border-radius: 9px;
+      color: #475569;
+      background: #f8fbff;
+      font-size: 14px;
+    }
+
+    .service-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-group {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+
+    .service-group h3 {
+      margin-bottom: 15px;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-item {
+      padding: 15px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: white;
+    }
+
+    .service-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--heading);
+    }
+
+    .service-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .research-card {
+      padding: 21px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: #f8fafc;
+    }
+
+    .research-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 30px;
+      padding: 27px;
+      border-radius: 14px;
+      color: white;
+      background:
+        linear-gradient(
+          135deg,
+          #1e3a8a,
+          #0f766e
+        );
+    }
+
+    .contact-panel h3 {
+      color: white;
+      font-size: 24px;
+    }
+
+    .contact-panel p {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: #e2e8f0;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      color: #0f172a;
+      background: white;
     }
 
     footer {
+      padding: 34px 20px;
+      color: #94a3b8;
+      background: #0f172a;
       text-align: center;
-      padding: 30px;
-      color: #6b7280;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 980px) {
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .journey-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .journey-step:not(:last-child)::after {
+        display: none;
+      }
+
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 780px) {
+      header {
+        padding: 60px 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+      }
+
+      .hero-links {
+        justify-content: center;
+      }
+
+      .nav-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+      }
+
+      section {
+        padding: 27px 23px;
+      }
+
+      .talk-grid,
+      .article-grid,
+      .research-grid,
+      .evidence-grid,
+      .service-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .evidence-card.featured {
+        grid-column: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      main {
+        padding: 25px 14px 44px;
+      }
+
+      section {
+        padding: 23px 18px;
+      }
+
+      .metrics,
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .talk-card,
+      .track {
+        padding: 19px;
+      }
+
+      .contact-panel {
+        padding: 22px;
+      }
+
+      .contact-link {
+        width: 100%;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Venkata Phani Patelkhana",
+    "alternateName": ["Phani Patelkhana", "Venkata Satya Patelkhana"],
+    "url": "https://venkataphanipatelkhana.github.io/",
+    "image": "https://venkataphanipatelkhana.github.io/images/phani-patelkhana.jpg",
+    "jobTitle": "Distinguished Engineer",
+    "description": "IEEE Senior Member, independent practitioner, speaker, and author focused on enterprise AI architecture, agent identity, MCP gateways, runtime authorization, API security, enterprise graphs, and AI governance.",
+    "sameAs": [
+      "https://www.linkedin.com/in/phani-patelkhana/",
+      "https://medium.com/@venkataphanipatelkhana",
+      "https://github.com/venkataphanipatelkhana",
+      "https://scholar.google.com/citations?user=hf4bt_IAAAAJ&hl=en"
+    ],
+    "knowsAbout": [
+      "Enterprise AI Architecture",
+      "Agentic AI",
+      "AI Agent Identity",
+      "Runtime Authorization",
+      "MCP Gateways",
+      "API Security",
+      "AI Governance",
+      "Enterprise Graphs",
+      "Developer Platforms",
+      "Zero Trust Architecture"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+  <!--
+    Upload your photo to:
+    images/phani-patelkhana.jpg
+  -->
+
   <header>
-    <h1>Venkata Phani Patelkhana</h1>
+    <div class="hero">
+      <img
+        src="images/phani-patelkhana.jpg"
+        alt="Professional headshot of Venkata Phani Patelkhana"
+        class="profile-photo"
+      >
 
-    <p>
-      Distinguished Engineer | IEEE Senior Member | Enterprise AI
-      Architecture | Agent Identity | MCP Gateways | Runtime Governance
-    </p>
+      <div>
+        <p class="eyebrow">
+          Enterprise AI Architect · Independent Practitioner · Speaker
+        </p>
 
-    <p>
-      Independent practitioner, speaker, and author focused on the
-      context, identity, security, and control-plane foundations required
-      for enterprise AI agents.
-    </p>
+        <h1>Venkata Phani Patelkhana</h1>
+
+        <p class="hero-headline">
+          Distinguished Engineer | IEEE Senior Member |
+          Enterprise AI Architecture | Agent Identity |
+          MCP Gateways | Runtime Governance
+        </p>
+
+        <p class="hero-description">
+          I explore the identity, context, security, gateway, and
+          control-plane foundations required for enterprise AI agents
+          to reason and act safely across real business systems.
+        </p>
+
+        <div class="hero-links">
+          <a href="#upcoming" class="button button-primary">
+            Upcoming Talks
+          </a>
+
+          <a href="#speaking" class="button button-secondary">
+            Speaking Portfolio
+          </a>
+
+          <a href="#articles" class="button button-secondary">
+            Read My Articles
+          </a>
+
+          <a
+            href="https://scholar.google.com/citations?user=hf4bt_IAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-secondary"
+          >
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#focus">Focus Areas</a>
-    <a href="#speaking">Speaking</a>
-    <a href="#articles">Articles</a>
-    <a href="#research">Research</a>
-    <a href="#contact">Contact</a>
+  <nav aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#about">About</a>
+      <a href="#journey">My Journey</a>
+      <a href="#upcoming">Upcoming</a>
+      <a href="#speaking">Past Talks</a>
+      <a href="#publications">Publications</a>
+      <a href="#service">Service</a>
+      <a href="#articles">Articles</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <main>
@@ -143,116 +1045,1378 @@
 
       <p>
         I am a Distinguished Engineer and IEEE Senior Member with more
-        than 19 years of experience in enterprise API platforms,
-        distributed systems, developer portals, API security, gateways,
-        and agentic AI architecture.
+        than 19 years of experience across enterprise API platforms,
+        distributed systems, developer portals, decentralized gateways,
+        API security, and agentic AI architecture.
       </p>
 
       <p>
-        My current work and independent research explore how enterprises
-        can securely govern AI agents through identity, context,
-        bounded authority, runtime authorization, MCP gateways, and
-        control-plane architectures.
+        My current work and independent research focus on how enterprises
+        can govern AI agents through identity, context, bounded authority,
+        runtime authorization, MCP gateways, enterprise graphs, human
+        approvals, observability, and control-plane architectures.
       </p>
 
       <p>
-        Views expressed on this website are my own.
+        My writing and speaking connect lessons from the API platform era
+        with the emerging agent-first enterprise: APIs expose capabilities,
+        MCP connects agents to tools and context, and agentic systems add
+        the ability to plan, decide, delegate, and act.
       </p>
+
+      <div class="metrics" aria-label="Professional highlights">
+        <div class="metric">
+          <strong>19+</strong>
+          <span>Years in enterprise platforms and architecture</span>
+        </div>
+
+        <div class="metric">
+          <strong>IEEE</strong>
+          <span>Senior Member and technical speaker</span>
+        </div>
+
+        <div class="metric">
+          <strong>8</strong>
+          <span>Past and upcoming 2026 speaking engagements</span>
+        </div>
+
+        <div class="metric">
+          <strong>16</strong>
+          <span>Featured practitioner articles</span>
+        </div>
+
+        <div class="metric">
+          <strong>1</strong>
+          <span>Peer-reviewed IEEE conference publication</span>
+        </div>
+
+        <div class="metric">
+          <strong>2</strong>
+          <span>Technical peer-review appointments in 2026</span>
+        </div>
+
+        <div class="metric">
+          <strong>1</strong>
+          <span>Innovation hackathon judging engagement</span>
+        </div>
+
+        <div class="metric">
+          <strong>3</strong>
+          <span>Linked industry recognition references</span>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        The views and opinions expressed on this website are my own and
+        do not necessarily represent those of my employer or any
+        affiliated organization.
+      </div>
     </section>
 
-    <section id="focus">
-      <h2>Focus Areas</h2>
+    <section id="journey">
+      <h2>One Connected Body of Work</h2>
 
-      <span class="tag">Enterprise AI Architecture</span>
-      <span class="tag">Agent Identity</span>
-      <span class="tag">Runtime Authorization</span>
-      <span class="tag">MCP Gateways</span>
-      <span class="tag">API and AI Security</span>
-      <span class="tag">Enterprise Graphs</span>
-      <span class="tag">Developer Platforms</span>
-      <span class="tag">AI Governance</span>
+      <p class="section-intro">
+        My talks and articles follow a consistent architecture journey.
+        The story begins with enterprise platforms and APIs, moves into
+        MCP and agent access, then develops the identity, runtime control,
+        governance, and context layers required for trustworthy agents.
+      </p>
+
+      <div class="journey-grid">
+        <div class="journey-step">
+          <span class="journey-number">1</span>
+          <h4>Platform Foundations</h4>
+          <p>
+            APIs, developer portals, decentralized gateways, and
+            multi-platform governance.
+          </p>
+        </div>
+
+        <div class="journey-step">
+          <span class="journey-number">2</span>
+          <h4>MCP Connectivity</h4>
+          <p>
+            Connecting agents to live enterprise tools, services, and
+            context through reusable protocols.
+          </p>
+        </div>
+
+        <div class="journey-step">
+          <span class="journey-number">3</span>
+          <h4>Identity and Authority</h4>
+          <p>
+            Agent identity, user delegation, session-bound access, and
+            least privilege.
+          </p>
+        </div>
+
+        <div class="journey-step">
+          <span class="journey-number">4</span>
+          <h4>Runtime Control</h4>
+          <p>
+            Gateways, policy checks, approvals, rate limits, audit, and
+            observability before actions execute.
+          </p>
+        </div>
+
+        <div class="journey-step">
+          <span class="journey-number">5</span>
+          <h4>Governed Context</h4>
+          <p>
+            Enterprise maps and graphs that help agents understand
+            relationships, dependencies, policies, and boundaries.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Focus Areas</h3>
+
+      <div class="tag-list">
+        <span class="tag">Enterprise AI Architecture</span>
+        <span class="tag">Agent Identity</span>
+        <span class="tag">Runtime Authorization</span>
+        <span class="tag">MCP Gateways</span>
+        <span class="tag">API and AI Security</span>
+        <span class="tag">Enterprise Graphs</span>
+        <span class="tag">Developer Platforms</span>
+        <span class="tag">AI Governance</span>
+        <span class="tag">Zero Trust</span>
+        <span class="tag">Agent Control Planes</span>
+      </div>
+    </section>
+
+    <section id="upcoming">
+      <h2>Upcoming Tech Talks</h2>
+
+      <p class="section-intro">
+        These sessions extend the same body of work into continuous risk
+        evaluation and domain-specific agent governance.
+      </p>
+
+      <div class="talk-grid">
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-upcoming">Upcoming</span>
+            <span class="talk-date">
+              August 6, 2026 · 6:00 PM · Virtual
+            </span>
+          </div>
+
+          <h3>
+            The Agent Passed Every Check—Then the Context Changed
+          </h3>
+
+          <p>
+            An agent may begin with a valid identity, approved tools, and
+            limited permissions, yet become riskier as new documents,
+            memory, tool responses, user input, or other agents influence
+            the workflow. This talk explains why trust must be
+            continuously reassessed before sensitive actions complete.
+          </p>
+
+          <p>
+            <strong>Hosted by:</strong> IEEE Memphis
+          </p>
+
+          <div class="talk-actions">
+            <a
+              href="https://events.vtools.ieee.org/m/569021"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View IEEE event →
+            </a>
+
+            <a
+              href="https://yp.ieee.org/event/ieee-memphis-tech-talk-venkata-phani-patelkhana-on-agentic-ai-risk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View IEEE YP listing →
+            </a>
+          </div>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/authentication-and-authorization-arent-enough-for-ai-agents-a29960e3d445"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Why OBO Helps—and Why Session Privileges Finally Fix
+                  the Problem
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/ai-agent-identity-the-missing-control-plane-in-enterprise-ai-security-048d2d137456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AI Agent Identity Mesh: The Real Control Plane for
+                  Enterprise AI
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-enterprise-ai-control-plane-8f36b409deef"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Enterprise AI Control Plane
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/smart-confident-and-completely-unsupervised-why-ai-agents-fail-in-production-b420a5a284b2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Smart, Confident, and Completely Unsupervised
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-upcoming">Upcoming</span>
+            <span class="talk-date">
+              September 17, 2026 · 7:00 PM–8:00 PM CDT · IEEE Houston
+            </span>
+          </div>
+
+          <h3>
+            Agentic AI in Energy Operations: Where Traditional Systems
+            Meet Autonomous Intelligence
+          </h3>
+
+          <p>
+            A domain-focused session on using an Agent Control Layer to
+            manage identity, context, permissions, runtime authorization,
+            approvals, observability, and audit as autonomous agents
+            interact with energy operations.
+          </p>
+
+          <p>
+            <strong>Positioning:</strong>
+            Independent Researcher | IEEE Senior Member
+          </p>
+
+          <div class="talk-actions">
+            <a
+              href="https://events.vtools.ieee.org/m/569350"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View IEEE event →
+            </a>
+          </div>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-enterprise-ai-control-plane-8f36b409deef"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Enterprise AI Control Plane
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/ai-agent-identity-the-missing-control-plane-in-enterprise-ai-security-048d2d137456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AI Agent Identity Mesh
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-concierge-agent-at-the-gate-55f810497619"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Concierge Agent at the Gate
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/family-plan-not-individual-plan-fixing-rate-limiting-for-multi-tenant-ai-agents-d48267a9da7a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Family Plan, Not Individual Plan
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+      </div>
     </section>
 
     <section id="speaking">
-      <h2>Featured Tech Talks</h2>
+      <h2>Past Tech Talks and Community Sessions</h2>
 
-      <div class="item">
-        <h3>
-          Giving AI Agents a Map: Why Context Matters More Than
-          Intelligence
-        </h3>
+      <p class="section-intro">
+        Each talk below is connected to companion articles so audiences
+        can continue from the presentation into deeper architectural
+        explanations and practical patterns.
+      </p>
 
-        <p>
-          Why enterprise AI agents require relationships, dependencies,
-          policies, ownership, and boundaries before they can make
-          reliable decisions.
-        </p>
+      <div class="talk-grid">
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-past">Past</span>
+            <span class="talk-date">March 25, 2026 · IEEE/ACM Austin</span>
+          </div>
+
+          <h3>
+            The MCP Gateway: The Control Plane for Enterprise AI Agents
+          </h3>
+
+          <p>
+            How a governed MCP gateway can mediate agent access to tools,
+            APIs, data, and services while applying identity, policy,
+            rate limiting, security controls, and runtime visibility.
+          </p>
+
+          <div class="talk-actions">
+            <a
+              href="https://events.vtools.ieee.org/m/542309"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View IEEE event →
+            </a>
+          </div>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-hidden-power-of-mcp-revolutionizing-enterprise-ai-with-mcp-servers-agent-ai-clients-and-the-c4d287151b96"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Hidden Power of MCP
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-silent-threat-inside-ai-ecosystems-why-mcp-and-agent-security-cant-wait-cb732d78829e"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Silent Threat Inside AI Ecosystems
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-concierge-agent-at-the-gate-55f810497619"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Concierge Agent at the Gate
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/family-plan-not-individual-plan-fixing-rate-limiting-for-multi-tenant-ai-agents-d48267a9da7a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Family Plan, Not Individual Plan
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-past">Past</span>
+            <span class="talk-date">May 9, 2026 · ACM Tech Talk</span>
+          </div>
+
+          <h3>
+            Why Traditional AuthN/AuthZ Fails for Autonomous AI Agents
+          </h3>
+
+          <p>
+            Why identity and broad permissions are only the starting
+            point when an agent can plan, select skills, invoke tools,
+            serve multiple users, and act across tenant and session
+            boundaries.
+          </p>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/beyond-auth-authz-the-real-threats-in-api-security-6d85e95e1a76"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Beyond Auth &amp; AuthZ: The Real Threats in API Security
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/authentication-and-authorization-arent-enough-for-ai-agents-a29960e3d445"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Why OBO Helps—and Why Session Privileges Finally Fix
+                  the Problem
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/ai-agent-identity-the-missing-control-plane-in-enterprise-ai-security-048d2d137456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AI Agent Identity Mesh
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-concierge-agent-at-the-gate-55f810497619"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Concierge Agent at the Gate
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-past">Past</span>
+            <span class="talk-date">
+              May 16, 2026 · ACM Tech Talk by Invitation
+            </span>
+          </div>
+
+          <h3>
+            Why AI Agents Fail in Production—and How to Fix Them
+          </h3>
+
+          <p>
+            Why a successful model or demonstration is not enough for
+            production. Reliable agentic systems also require execution
+            boundaries, state, observability, governance, identity,
+            runtime controls, and accountability.
+          </p>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/smart-confident-and-completely-unsupervised-why-ai-agents-fail-in-production-b420a5a284b2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Smart, Confident, and Completely Unsupervised
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-enterprise-ai-control-plane-8f36b409deef"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Enterprise AI Control Plane
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/whos-running-city-hall-ai-agents-need-a-control-plane-8b3b34031464"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Who’s Running City Hall?
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/family-plan-not-individual-plan-fixing-rate-limiting-for-multi-tenant-ai-agents-d48267a9da7a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Family Plan, Not Individual Plan
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-past">Past</span>
+            <span class="talk-date">June 9, 2026 · Kong Community Event</span>
+          </div>
+
+          <h3>
+            Safely Scaling AI Autonomy with Governance from Day One
+          </h3>
+
+          <p>
+            Practical perspectives on scaling agent autonomy while
+            establishing clear identity, policy, execution, cost, risk,
+            and audit controls from the beginning rather than adding
+            governance after deployment.
+          </p>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-enterprise-ai-control-plane-8f36b409deef"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Enterprise AI Control Plane
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-silent-threat-inside-ai-ecosystems-why-mcp-and-agent-security-cant-wait-cb732d78829e"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Silent Threat Inside AI Ecosystems
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-concierge-agent-at-the-gate-55f810497619"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Concierge Agent at the Gate
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/family-plan-not-individual-plan-fixing-rate-limiting-for-multi-tenant-ai-agents-d48267a9da7a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Family Plan, Not Individual Plan
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-past">Past</span>
+            <span class="talk-date">
+              July 6, 2026 · IEEE Expert Tech Talks
+            </span>
+          </div>
+
+          <h3>
+            Infrastructure Over Models: Why Enterprise AI Is Really a
+            Control-Plane Problem
+          </h3>
+
+          <p>
+            A reference architecture built around shared control points
+            for model traffic and agent execution, enabling consistent
+            policy, trusted identity context, sensitive-data protection,
+            approvals, and observability without centralizing innovation.
+          </p>
+
+          <div class="talk-actions">
+            <a
+              href="https://events.vtools.ieee.org/m/565135"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View IEEE event →
+            </a>
+          </div>
+
+          <details>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-enterprise-ai-control-plane-8f36b409deef"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Enterprise AI Control Plane
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/whos-running-city-hall-ai-agents-need-a-control-plane-8b3b34031464"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Who’s Running City Hall?
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/from-monoliths-to-agentic-mcps-why-fundamentals-never-change-8ac78ffece50"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  From Monoliths to Agentic MCPs
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/smart-confident-and-completely-unsupervised-why-ai-agents-fail-in-production-b420a5a284b2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Smart, Confident, and Completely Unsupervised
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="talk-card">
+          <div class="talk-meta">
+            <span class="status status-past">Past</span>
+            <span class="talk-date">
+              July 18, 2026 · IEEE Computer Society Charlotte
+            </span>
+          </div>
+
+          <h3>
+            Giving AI Agents a Map: Why Context Matters More Than
+            Intelligence
+          </h3>
+
+          <p>
+            Why agents need a connected understanding of relationships,
+            dependencies, identities, ownership, permissions, policies,
+            and boundaries—not only documents or more model intelligence.
+          </p>
+
+          <div class="talk-actions">
+            <a
+              href="https://events.vtools.ieee.org/m/568157"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View IEEE event →
+            </a>
+          </div>
+
+          <details open>
+            <summary>Related reading</summary>
+            <ul class="related-reading">
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/before-you-give-ai-agents-a-map-you-have-to-build-the-city-86fd83575d2c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Before You Give AI Agents a Map, You Have to Build the
+                  City
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/the-enterprise-is-turning-into-a-graph-whether-you-planned-it-that-way-or-not-72387b578f7c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Enterprise Is Turning Into a Graph
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://medium.com/@venkataphanipatelkhana/whos-running-city-hall-ai-agents-need-a-control-plane-8b3b34031464"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Who’s Running City Hall? AI Agents Need a Control Plane
+                </a>
+              </li>
+            </ul>
+          </details>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications and Patents</h2>
+
+      <p class="section-intro">
+        My formal technical contributions include peer-reviewed research
+        on zero-trust agent gateways and intellectual property related to
+        decentralized API gateway architectures and API naming
+        management.
+      </p>
+
+      <div class="evidence-grid">
+        <article class="evidence-card featured">
+          <span class="evidence-label">
+            Peer-Reviewed IEEE Conference Publication
+          </span>
+
+          <h3>
+            Zero-Trust Gateway Protocol for Multi-Tenant AI Agents
+          </h3>
+
+          <p class="citation-line">
+            Venkata Phani Patelkhana · 2026 IEEE World AI IoT Congress
+            (AIIoT) · pp. 605–610
+          </p>
+
+          <p>
+            This work examines gateway-mediated delegation,
+            tenant-aware authorization, per-request verification,
+            short-lived authority, and skill-level access controls for
+            multi-tenant AI agent interactions.
+          </p>
+
+          <div class="talk-actions">
+            <a
+              href="https://ieeexplore.ieee.org/abstract/document/11569638"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View publication on IEEE Xplore →
+            </a>
+
+            <a
+              href="https://scholar.google.com/citations?user=hf4bt_IAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              View Google Scholar profile →
+            </a>
+          </div>
+        </article>
+
+        <article class="evidence-card">
+          <span class="evidence-label patent">
+            Granted U.S. Patent
+          </span>
+
+          <h3>
+            Decentralized Framework for Providing Application
+            Programming Interface Gateways
+          </h3>
+
+          <p class="citation-line">
+            U.S. Patent 12,299,505 B2 · Granted 2025 · Co-inventor
+          </p>
+
+          <p>
+            A decentralized API gateway framework supporting gateway
+            selection, self-service configuration, policy enforcement,
+            monitoring, resilience, and scalable enterprise governance.
+          </p>
+
+          <a
+            href="https://patents.google.com/patent/US12299505B2/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-link"
+          >
+            View patent →
+          </a>
+        </article>
+
+        <article class="evidence-card">
+          <span class="evidence-label patent">
+            Published U.S. Patent Application
+          </span>
+
+          <h3>
+            Automated Naming Management for Application Programming
+            Interfaces
+          </h3>
+
+          <p class="citation-line">
+            U.S. Patent Application 18/495,309 · Published application ·
+            Co-inventor
+          </p>
+
+          <p>
+            A framework for generating and managing standardized API
+            names to improve consistency, governance, discovery, and
+            search across enterprise API portfolios and developer
+            portals.
+          </p>
+
+          <a
+            href="https://patents.google.com/patent/US20250138916A1/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-link"
+          >
+            View patent application →
+          </a>
+        </article>
       </div>
 
-      <div class="item">
-        <h3>
-          Infrastructure Over Models: Why Enterprise AI Is Really a
-          Control-Plane Problem
-        </h3>
-
-        <p>
-          A practical examination of the gateways, identity systems,
-          policy controls, and observability layers required to operate
-          enterprise AI safely.
-        </p>
+      <div class="evidence-note">
+        Publications and patents may also appear under the name
+        <strong>Venkata Satya Patelkhana</strong>.
       </div>
+    </section>
 
-      <div class="item">
-        <h3>
-          Beyond AuthN/AuthZ: Runtime Authorization for Agentic AI
-          Skills, Tools, and Actions
-        </h3>
+    <section id="service">
+      <h2>Professional Service and Industry Recognition</h2>
 
-        <p>
-          How authorization must evolve when software can plan, select
-          tools, delegate tasks, and act on behalf of users.
-        </p>
+      <p class="section-intro">
+        I contribute to the technical community through peer-review
+        appointments, innovation judging, conference participation, and
+        independent industry commentary on enterprise and agentic AI
+        security.
+      </p>
+
+      <div class="service-columns">
+        <div class="service-group">
+          <h3>Professional Service</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+              <strong>
+                Technical Program Committee Reviewer
+              </strong>
+              <span>
+                IEEE World AI IoT Congress (AIIoT 2026)
+              </span>
+            </li>
+
+            <li class="service-item">
+              <strong>
+                Technical Program Committee Reviewer
+              </strong>
+              <span>
+                Global AI Security Summit (GAISS 2026)
+              </span>
+            </li>
+
+            <li class="service-item">
+              <strong>
+                Innovation Hackathon Judge
+              </strong>
+              <span>
+                Global Tech Innovation Hackathon 2026
+              </span>
+            </li>
+          </ul>
+
+          <div class="evidence-note">
+            <strong>2026 service summary:</strong>
+            Two technical peer-review appointments and one innovation
+            judging engagement.
+          </div>
+        </div>
+
+        <div class="service-group">
+          <h3>Selected Industry Recognition</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+              <strong>
+                Akto State of Agentic AI Security Report
+              </strong>
+              <span>
+                Quoted as a subject-matter expert in Akto’s
+                <em>2025 State of Agentic AI Security Report</em>.
+              </span>
+              <a
+                href="https://www.akto.io/state-of-agentic-ai-security-2025"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link"
+              >
+                View Akto report →
+              </a>
+            </li>
+
+            <li class="service-item">
+              <strong>
+                Aktonomy ’26 Event Materials
+              </strong>
+              <span>
+                Featured in Aktonomy ’26 materials discussing
+                governance, guardrails, continuous monitoring, and
+                secure enterprise adoption of agentic AI.
+              </span>
+              <a
+                href="https://www.akto.io/aktonomy-2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link"
+              >
+                View Aktonomy ’26 →
+              </a>
+            </li>
+
+            <li class="service-item">
+              <strong>
+                Digital Commerce 360 Industry Commentary
+              </strong>
+              <span>
+                Quoted in <em>Digital Commerce 360</em> in December
+                2025 on autonomous AI security risks, governance, and
+                practical control mechanisms.
+              </span>
+              <a
+                href="https://www.digitalcommerce360.com/2025/12/15/sellers-autonomous-ai-security-risks-controls/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link"
+              >
+                Read the media article →
+              </a>
+            </li>
+          </ul>
+
+          <div class="evidence-note">
+            These independent references provide external evidence of
+            my contributions to discussions on agentic AI security,
+            autonomous-system risk, governance, and enterprise control
+            architectures.
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="articles">
-      <h2>Featured Articles</h2>
+      <h2>Articles by Thought-Leadership Track</h2>
 
-      <div class="item">
-        <h3>
-          The Enterprise Is Turning Into a Graph, Whether You Planned
-          It That Way or Not
-        </h3>
+      <p class="section-intro">
+        The article library is organized by architectural theme rather
+        than publication date. This makes the progression of ideas clear
+        and allows event organizers, researchers, and practitioners to
+        find the work most relevant to them.
+      </p>
 
-        <p>
-          An exploration of why enterprises increasingly need connected
-          representations of identities, data, APIs, policies, tools,
-          and agents.
-        </p>
+      <div class="track">
+        <div class="track-header">
+          <span class="track-number">1</span>
 
-        <a
-          href="https://venkataphanipatelkhana.medium.com/the-enterprise-is-turning-into-a-graph-whether-you-planned-it-that-way-or-not-72387b578f7c"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read on Medium
-        </a>
+          <div>
+            <h3>Enterprise Context, Maps, and Graphs</h3>
+            <p>
+              Why agents need a connected representation of the
+              enterprise before they can navigate it safely.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <h4>
+              Before You Give AI Agents a Map, You Have to Build the City
+            </h4>
+            <p>
+              Shared language, meaningful relationships, and connected
+              enterprise foundations must come before agent navigation.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/before-you-give-ai-agents-a-map-you-have-to-build-the-city-86fd83575d2c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              The Enterprise Is Turning Into a Graph, Whether You
+              Planned It That Way or Not
+            </h4>
+            <p>
+              The architectural shift from disconnected inventories to
+              governed relationships, reachability, and paths.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/the-enterprise-is-turning-into-a-graph-whether-you-planned-it-that-way-or-not-72387b578f7c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>Who’s Running City Hall? AI Agents Need a Control Plane</h4>
+            <p>
+              Why visibility, ownership, coordination, policy, and
+              accountability become necessary as agent ecosystems scale.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/whos-running-city-hall-ai-agents-need-a-control-plane-8b3b34031464"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+        </div>
       </div>
 
-      <div class="item">
-        <h3>Why AI Agents Fail in Production</h3>
+      <div class="track">
+        <div class="track-header">
+          <span class="track-number">2</span>
 
-        <p>
-          Why intelligence alone cannot replace runtime controls,
-          observability, state management, and operational governance.
-        </p>
+          <div>
+            <h3>Production AI and Enterprise Control Planes</h3>
+            <p>
+              The runtime architecture required to move from successful
+              pilots to reliable, governable enterprise systems.
+            </p>
+          </div>
+        </div>
 
+        <div class="article-grid">
+          <article class="article-card">
+            <h4>
+              Smart, Confident, and Completely Unsupervised: Why AI
+              Agents Fail in Production
+            </h4>
+            <p>
+              Why intelligence alone cannot replace runtime controls,
+              state, observability, operational boundaries, and evidence.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/smart-confident-and-completely-unsupervised-why-ai-agents-fail-in-production-b420a5a284b2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              The Enterprise AI Control Plane: Preventing
+              Multi-Million-Dollar Failures Through Strong AI Governance
+            </h4>
+            <p>
+              Runtime enforcement and evidence across identity,
+              sessions, tools, policies, risk, cost, and audit.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/the-enterprise-ai-control-plane-8f36b409deef"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              Family Plan, Not Individual Plan: Fixing Rate Limiting for
+              Multi-Tenant AI Agents
+            </h4>
+            <p>
+              Why tenant subscriptions, aggregate limits, cost controls,
+              isolation, and blast-radius boundaries matter.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/family-plan-not-individual-plan-fixing-rate-limiting-for-multi-tenant-ai-agents-d48267a9da7a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="track">
+        <div class="track-header">
+          <span class="track-number">3</span>
+
+          <div>
+            <h3>Agent Identity and Runtime Authorization</h3>
+            <p>
+              Establishing who the agent is, on whose behalf it acts,
+              and what it may do in the current task and session.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <h4>
+              AI Agent Identity Mesh: The Real Control Plane for
+              Enterprise AI
+            </h4>
+            <p>
+              The Agent of Record, ownership, lifecycle, delegation,
+              audit, and revocation foundations for non-human principals.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/ai-agent-identity-the-missing-control-plane-in-enterprise-ai-security-048d2d137456"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              Why OBO Helps—and Why Session Privileges Finally Fix the
+              Problem
+            </h4>
+            <p>
+              User delegation plus session-bound privileges for
+              multi-tenant agents operating across tools and resources.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/authentication-and-authorization-arent-enough-for-ai-agents-a29960e3d445"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>The Concierge Agent at the Gate</h4>
+            <p>
+              A gateway-mediated pattern where the gate—not the agent—
+              determines access per user, task, session, and tool.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/the-concierge-agent-at-the-gate-55f810497619"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>Beyond Auth &amp; AuthZ: The Real Threats in API Security</h4>
+            <p>
+              The broader API security foundation behind the transition
+              from protecting access to protecting behavior and outcomes.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/beyond-auth-authz-the-real-threats-in-api-security-6d85e95e1a76"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="track">
+        <div class="track-header">
+          <span class="track-number">4</span>
+
+          <div>
+            <h3>MCP Architecture, Connectivity, and Security</h3>
+            <p>
+              How agents connect to live tools and context—and why that
+              connectivity needs protocol, gateway, identity, and runtime
+              security controls.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <h4>
+              The Silent Threat Inside AI Ecosystems: Why MCP and Agent
+              Security Can’t Wait
+            </h4>
+            <p>
+              Governance, attestation, runtime monitoring, least
+              privilege, and threat protection for agent–MCP ecosystems.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/the-silent-threat-inside-ai-ecosystems-why-mcp-and-agent-security-cant-wait-cb732d78829e"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              The End of Inefficient Polling: MCP Streamable HTTP
+              Supercharges Real-Time Data
+            </h4>
+            <p>
+              Transport, streaming, sessions, resumability, and
+              real-time communication for MCP integrations.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/the-end-of-inefficient-polling-mcp-streamable-http-supercharges-real-time-data-adf1297803fb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              The Hidden Power of MCP: Revolutionizing Enterprise AI
+              with MCP Servers and Agent AI Clients
+            </h4>
+            <p>
+              A reusable integration layer connecting agents to secure,
+              real-time enterprise systems and business context.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/the-hidden-power-of-mcp-revolutionizing-enterprise-ai-with-mcp-servers-agent-ai-clients-and-the-c4d287151b96"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="track">
+        <div class="track-header">
+          <span class="track-number">5</span>
+
+          <div>
+            <h3>Platform and Developer Experience Foundations</h3>
+            <p>
+              The API, gateway, portal, abstraction, security, and
+              platform lessons that continue into the agentic AI era.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <h4>
+              From Monoliths to Agentic MCPs: Why Fundamentals Never
+              Change
+            </h4>
+            <p>
+              A reflection on technology evolution and the enduring
+              importance of APIs, security, platforms, and governance.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/from-monoliths-to-agentic-mcps-why-fundamentals-never-change-8ac78ffece50"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              One Developer Portal to Rule Them All: Escape Vendor Lock-In
+              and Accelerate API Innovation
+            </h4>
+            <p>
+              A centralized developer experience and abstraction layer
+              across decentralized, best-fit gateway platforms.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/one-developer-portal-to-rule-them-all-escape-vendor-lock-in-and-accelerate-api-innovation-b38519ba7688"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+
+          <article class="article-card">
+            <h4>
+              Revolutionizing Developer Experience: The Real Impact of a
+              Modern Developer Portal
+            </h4>
+            <p>
+              How portals improve discoverability, onboarding,
+              self-service, governance, and developer productivity.
+            </p>
+            <a
+              href="https://medium.com/@venkataphanipatelkhana/revolutionizing-developer-experience-the-real-impact-of-a-modern-developer-portal-6748146d61ac"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read on Medium →
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <div class="talk-actions" style="margin-top: 25px;">
         <a
           href="https://medium.com/@venkataphanipatelkhana"
           target="_blank"
           rel="noopener noreferrer"
+          class="button"
+          style="color: white; background: var(--primary);"
         >
-          View Medium profile
+          Explore All Medium Articles
         </a>
       </div>
     </section>
@@ -260,67 +2424,136 @@
     <section id="research">
       <h2>Research and Technical Work</h2>
 
-      <div class="item">
-        <h3>Zero-Trust Authorization for Agentic Systems</h3>
+      <p class="section-intro">
+        My research interests focus on practical mechanisms that preserve
+        identity, intent, authority, tenant boundaries, policy context,
+        and evidence as agents move across enterprise systems.
+      </p>
 
-        <p>
-          Research into gateway-mediated delegation, tenant-aware
-          authorization, per-hop policy evaluation, and short-lived
-          authority for AI agents.
-        </p>
-      </div>
+      <div class="research-grid">
+        <article class="research-card">
+          <h3>Zero-Trust Gateway Protocol for Multi-Tenant AI Agents</h3>
+          <p>
+            Gateway-mediated delegation, per-request verification,
+            tenant isolation, short-lived credentials, and skill-level
+            access control for agent interactions.
+          </p>
+        </article>
 
-      <div class="item">
-        <h3>MCP Gateway and Agent Control Plane</h3>
+        <article class="research-card">
+          <h3>Runtime Authorization for Skills, Tools, and Actions</h3>
+          <p>
+            Evaluating the user, agent, skill, tool, session, tenant,
+            resource, intent, risk, and current policy context before
+            execution.
+          </p>
+        </article>
 
-        <p>
-          Reference architectures for governing agent access to tools,
-          APIs, data, memory, and MCP servers.
-        </p>
-      </div>
+        <article class="research-card">
+          <h3>MCP Gateway and Agent Control Plane</h3>
+          <p>
+            Reference architectures for discovery, subscriptions,
+            access management, guardrails, runtime governance, threat
+            visibility, and audit.
+          </p>
+        </article>
 
-      <div class="item">
-        <h3>Decentralized API Gateway Architecture</h3>
+        <article class="research-card">
+          <h3>Enterprise Context and Relationship Graphs</h3>
+          <p>
+            Connected representations of identities, APIs, applications,
+            tools, data, ownership, policies, and dependencies that help
+            agents make context-aware decisions.
+          </p>
+        </article>
 
-        <p>
-          Platform architecture and patented work related to
-          decentralized enterprise API gateway models.
-        </p>
+        <article class="research-card">
+          <h3>Agent Identity and Delegation</h3>
+          <p>
+            Agent-of-record models, identity lifecycle, on-behalf-of
+            delegation, session authority, revocation, and chain of
+            accountability.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <h3>Decentralized API Gateway Architecture</h3>
+          <p>
+            Patented and practitioner work related to decentralized
+            enforcement, unified platform experiences, scalable API
+            governance, and vendor-agnostic abstractions.
+          </p>
+        </article>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact and Collaboration</h2>
 
-      <p>
-        I welcome opportunities to contribute as a technical speaker,
-        conference reviewer, program committee member, mentor,
-        hackathon judge, or research collaborator.
-      </p>
+      <div class="contact-panel">
+        <div>
+          <h3>Speaking, Reviewing, Mentoring, and Collaboration</h3>
 
-      <p>
-        <a
-          href="https://www.linkedin.com/in/phani-patelkhana/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-        |
-        <a
-          href="https://medium.com/@venkataphanipatelkhana"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Medium
-        </a>
-      </p>
+          <p>
+            I welcome opportunities to contribute as a technical speaker,
+            conference reviewer, technical program committee member,
+            mentor, hackathon judge, or research collaborator in
+            enterprise AI architecture, agent identity, runtime
+            authorization, MCP platforms, API and AI security, enterprise
+            graphs, and AI governance.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/phani-patelkhana/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://medium.com/@venkataphanipatelkhana"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            Medium
+          </a>
+
+          <a
+            href="https://github.com/venkataphanipatelkhana"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://scholar.google.com/citations?user=hf4bt_IAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            Google Scholar
+          </a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer>
-    © 2026 Venkata Phani Patelkhana. Views expressed are my own.
+    <p>
+      © 2026 Venkata Phani Patelkhana. All rights reserved.
+    </p>
+
+    <p>
+      Views expressed are my own.
+    </p>
   </footer>
 
 </body>
