@@ -672,7 +672,8 @@
 
     .testimonial-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
       gap: 18px;
     }
 
@@ -2114,6 +2115,33 @@
             class="text-link"
           >
             View original LinkedIn post →
+          </a>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="quote-mark" aria-hidden="true">“</div>
+
+          <blockquote>
+            It was great attending this session. There were so many
+            valuable insights on AI governance, agentic AI, and API
+            infrastructure.
+          </blockquote>
+
+          <div class="testimonial-author">
+            <strong>Harshana Charkala</strong>
+            <span>
+              Attendee · Kong Agentic Era World Tour session ·
+              June 2026
+            </span>
+          </div>
+
+          <a
+            href="https://www.linkedin.com/posts/sandyacooley_kong-agenticera-aigovernance-activity-7472336658957369345-_snB"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-link"
+          >
+            View original LinkedIn discussion →
           </a>
         </article>
       </div>
